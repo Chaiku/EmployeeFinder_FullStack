@@ -2,7 +2,19 @@ var employeeArray = [
 
     {
     empName: "George",
-    empSum: 8
+    empSum: 8,
+    empAns: [
+            1,
+            2,
+            4,
+            3,
+            5,
+            5,
+            4,
+            2,
+            2,
+            1
+    ]
     },
     {
     empName: "Louise",
