@@ -1,20 +1,25 @@
-$('form').on("submit", function(event) {
+$(function() {
+
+
+const submitSurvey = function (event) {
     event.preventDefault();
-    console.log($(this).serialize() );
-}) ;
 
+    const surveyAnswers = [
+         $('#question1').val().trim(),
+        $('#question2').val().trim(),
+        $('#question3').val().trim()
+    ];
 
+    // $.ajax({
+    //     method: 'POST',
+    //     url: '/api/employees',
+    //     data: surveyAnswers
+    // })
 
+    console.log(surveyAnswers);
+    console.log("hello I'm working");
+};
 
-let answerArray = [];
-let surveyAnswers = []
+$('#submitBtn').on('click', submitSurvey);
 
-const completeSurvey = function () {
-for(i = 0; i < surveyAnswers.length; i++) {
-    answerAray.push(question[i].val());
-    
-}
-
-for ( i = 0; i < answerArray.length; i++) {
-    math.abs(answerArray[i] - employeeAnswer[i])
-}
+});
