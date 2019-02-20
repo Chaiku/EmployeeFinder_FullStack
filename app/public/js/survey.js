@@ -19,23 +19,43 @@ const submitSurvey = function (event) {
     
     console.log(surveyAnswers);
 
-
     surveySum = surveyAnswers.reduce(function(a, b) {return a + b;}, 0);
 
     console.log(surveySum);
-
-
-         
+    
     
     $.ajax({
         method: 'GET',
         url: '/api/employees',
     }).then(function(data){
-        console.log(data[0].empAns);
-        employeeSum = data[0].empAns.reduce(function(a,b) {return a + b;},0);
+        
+        let differenceArray = [];
+
+        for ( i = 0; i < data.length; i++) {
+            let employeeSum = data[i].empAns.reduce(function(a,b) {return a + b;},0);
+            let totalDiff = Math.abs(employeeSum - surveySum);
+            differenceArray.push(totalDiff);
+        }
+
+        console.log(differenceArray);
+        console.log(Math.min.apply(null, differenceArray));
+
+        let employeeID = Math.min.apply(null, differenceArray);
+
+        for (i = 0; i < differenceArray.length; i++){
+            if ( differenceArray[i] === employeeID) {
+                $('#matchModalLabel').text(data[i].empName)
+                
+            }
+        }
+        
     
-        console.log(surveySum);
-        console.log(employeeSum);
+      
+    });
+
+    
+
+
 
         //log math.ABS of every emp sum against survey sum. take the lowest values of that array and return that. it will need a variable to make it
         //correspond back to an employee.
@@ -48,7 +68,7 @@ const submitSurvey = function (event) {
     //     };
     //     console.log(sum);
     //     console.log(differenceArray);
-    })
+
 
     // console.log(surveyAnswers);
     // console.log("hello I'm working");

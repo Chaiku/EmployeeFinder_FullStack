@@ -2,7 +2,6 @@ var employeeArray = [
 
     {
     empName: "George",
-    empSum: 8,
     empAns: [
             1,
             2,
@@ -18,39 +17,138 @@ var employeeArray = [
     },
     {
     empName: "Louise",
-    empSum: 10
+    empAns: [
+        1,
+        2,
+        4,
+        3,
+        5,
+        5,
+        5,
+        3,
+        3,
+        2
+]
     },
     {
     empName:"Francis",
-    empSum: 15
+    empAns: [
+        1,
+        2,
+        4,
+        5,
+        5,
+        5,
+        1,
+        5,
+        5,
+        3
+]
     },
     {
     empName: "Arnold",
-    empSum: 20
+    empAns: [
+        1,
+        2,
+        4,
+        3,
+        5,
+        5,
+        2,
+        5,
+        5,
+        4
+]
     },
     {
     empName: "Miranda",
-    empSum: 25
+    empAns: [
+        1,
+        1,
+        1,
+        1,
+        5,
+        5,
+        3,
+        1,
+        1,
+        5
+]
     },
     {
     empName: "Bertha",
-    empSum: 30
+    empAns: [
+        1,
+        2,
+        4,
+        4,
+        4,
+        5,
+        4,
+        2,
+        3,
+        1
+]
     },
     {
     empName: "Frank",
-    empSum: 35
+    empAns: [
+        1,
+        3,
+        3,
+        3,
+        5,
+        1,
+        5,
+        3,
+        3,
+        2
+]
     },
     {
     empName: "Wanda",
-    empSum: 40
+    empAns: [
+        1,
+        2,
+        4,
+        3,
+        5,
+        2,
+        1,
+        3,
+        5,
+        3
+]
     },
     {
     empName: "Gerome",
-    empSum: 45
+    empAns: [
+        1,
+        2,
+        4,
+        3,
+        5,
+        3,
+        2,
+        1,
+        1,
+        4
+]
     },
     {
     empName: "Andrea",
-    empSum: 50
+    empAns: [
+        1,
+        2,
+        4,
+        3,
+        5,
+        4,
+        3,
+        1,
+        2,
+        5
+]
     }
 
 ];

@@ -8,9 +8,9 @@ module.exports = function(app) {
     });
 
     //post the matched employee to the employeeList//
-    // app.post('/api/employees', function(req, res) {
-    //     employees.push(req.body);
+    app.post('/api/employees', function(req, res) {
+        employees.push(req.body);
 
-    //     res.end();
-    // });
+        res.end();
+    });
 }

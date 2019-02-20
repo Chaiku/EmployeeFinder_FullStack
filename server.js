@@ -2,10 +2,10 @@ const express = require('express');
 const path = require('path');
 
 const app = express();
-// process.env.PORT ||
-const PORT =  3000;
 
-app.use(express.urlencoded({extended: true}));
+const PORT = process.env.PORT || 3000;
+
+app.use(express.urlencoded({extended: true}));'EmployeeFinder/app/public'
 app.use(express.json());
 
 app.use(express.static(path.join(__dirname, 'app/public')));
