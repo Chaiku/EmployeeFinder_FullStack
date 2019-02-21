@@ -45,6 +45,7 @@ const submitSurvey = function (event) {
         for (i = 0; i < differenceArray.length; i++){
             if ( differenceArray[i] === employeeID) {
                 $('#matchModalLabel').text(data[i].empName)
+                $('.modal-body').html(`<img src=${data[i].empPhoto}>`)
                 
             }
         }
